@@ -1,0 +1,31 @@
+# Escriba un programa que lea tres números y nos diga cual es mayor, cual menor y cuales son iguales.
+num1 = float(input("Introduce el primer número: "))
+num2 = float(input("Introduce el segundo número: "))
+num3 = float(input("Introduce el tercer número: "))
+if num1 == num2 == num3:
+    print("Los tres números son iguales.")
+elif num1 >= num2 and num1 >= num3:
+    mayor = num1
+    if num2 >= num3:
+        menor = num3
+    else:
+        menor = num2
+elif num2 >= num1 and num2 >= num3:
+    mayor = num2
+    if num1 >= num3:
+        menor = num3
+    else:
+        menor = num1
+else:
+    mayor = num3
+    if num1 >= num2:
+        menor = num2
+    else:
+        menor = num1
+if num1 != num2 and num1 != num3 and num2 != num3:
+    print("El número mayor es:", mayor)
+    print("El número menor es:", menor)
+else:
+    print("El número mayor es:", mayor)
+    print("El número menor es:", menor)
+    print("Al menos dos números son iguales.")
